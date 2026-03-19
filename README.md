@@ -38,3 +38,10 @@ This evolves toward:
 PrivateVault.ai — The Agent Firewall for AI systems
 
 – Chandan
+
+## Attribution
+
+This experiment builds on top of Auto-GPT.
+All credit to the original authors.
+
+This repo explores adding an "Agent Firewall" layer on top of agent execution.
