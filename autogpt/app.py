@@ -106,6 +106,14 @@ def map_command_synonyms(command_name: str):
 
 
 def execute_command(command_name: str, arguments):
+    # --- Basic safety check before execution ---
+    try:
+        cmd_str = str(command_name).lower() + " " + str(arguments).lower()
+        if "password" in cmd_str or "secret" in cmd_str:
+            return "BLOCKED: sensitive command"
+    except Exception:
+        pass
+
     # --- PrivateVault Agent Firewall ---
     try:
         cmd_str = str(command_name).lower() + " " + str(arguments).lower()
